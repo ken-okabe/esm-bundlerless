@@ -16,20 +16,20 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/imp
 
 ## Robust dependencies
 
-- [TypeScript 3.0](https://www.typescriptlang.org/)
-For React JSX applications, there is a need to transpile JSX to vanilla JavaScript, and until now we needed to use webpack+babel, that has been a very complicated setup.
-Amazingly TypeScript has an ability to transpile JSX(TSX) to JS.  Hence, as long as sticking to TypeScript, another transpiler such as babel is not necessary.
-- [Electron 3.0](https://electronjs.org/)
-Electron is built on Chromium and Node.js technology, so it's a hybrid environment of both WebBrowser and local node runtime.
-Therefore, with Electron, I presume anything can be done, however, the fact is there is some issue to take advantage of ESM - [Issue: Contexts: supporting new Node's ESM Loader (without hacking)](https://github.com/electron/node/issues/33)
-While I commented there, the member of the team of Electron and the developer of [lodash](https://www.npmjs.com/package/lodash) relied on me to suggest to use [esm](https://www.npmjs.com/package/esm) library that is his another brilliant work, and that technically resolved the issue.
+- [TypeScript 3.0](https://www.typescriptlang.org/)  
+For React JSX applications, there is a need to transpile JSX to vanilla JavaScript, and until now we needed to use webpack+babel, that has been a very complicated setup.  
+Amazingly TypeScript has an ability to transpile JSX(TSX) to JS.  Hence, as long as sticking to TypeScript, another transpiler such as babel is not necessary.  
+- [Electron 3.0](https://electronjs.org/)  
+Electron is built on Chromium and Node.js technology, so it's a hybrid environment of both WebBrowser and local node runtime.  
+Therefore, with Electron, I presume anything can be done, however, the fact is there is some issue to take advantage of ESM - [Issue: Contexts: supporting new Node's ESM Loader (without hacking)](https://github.com/electron/node/issues/33)  
+While I commented there, the member of the team of Electron and the developer of [lodash](https://www.npmjs.com/package/lodash) relied on me to suggest to use [esm](https://www.npmjs.com/package/esm) library that is his another brilliant work, and that technically resolved the issue.  
 
 ![esm-dependency.png](https://kenokabetech.github.io/img/ts-react-electron/esm-dependency.png)
 
-- [Visual Studio Code ](https://code.visualstudio.com/)
-I highly recommend using Visual Studio Code than any other IDE including AtomEditor(by GitHub).
-VisualStudio code is optimized to use TypeScript out of the box, and in fact, VisualStudio Code is purely developed in TypeScript(Anders Hejlsberg explained so in some keynote.)
-Electron is originally a core unit of AtomEditor developed by GitHub, and is now Github is acquired by Microsoft. So Electron is now Microsoft Product.
+- [Visual Studio Code ](https://code.visualstudio.com/)  
+I highly recommend using Visual Studio Code than any other IDE including AtomEditor(by GitHub).  
+VisualStudio code is optimized to use TypeScript out of the box, and in fact, VisualStudio Code is purely developed in TypeScript(Anders Hejlsberg explained so in some Microsoft keynote.)    
+VisualStudio Code is developed by Microsoft and build on Electron, and it's one of the reason Microsoft acquired GitHub. Electron is originally a core unit of AtomEditor developed by GitHub, so essentially, Electron is now Microsoft's asset.  
 Very interestingly, all tools, TypeScript, Electron and VisualStudio Code are maintained by Microsoft. 
 
 ## TypeScript to JavaScript on save
