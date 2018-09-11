@@ -1,3 +1,4 @@
+
 # esm-bundlerless
 
 ESM (ES6 Modules) Bundlerless Front-end Development tool
@@ -54,6 +55,17 @@ https://github.com/Microsoft/TypeScript/issues/16577
 
 ![esm-whole0.png](https://kenokabetech.github.io/img/ts-react-electron/esm-whole0.png)
 
+## Deploy
+
+![esm-src.png](https://kenokabetech.github.io/img/ts-react-electron/esm-dist.png)
+
+The `dist` directory with `index.html` can be exported and it should work on modern browswers. 
+
+https://kenokabetech.github.io/demo/esm-bundlerless/dist/index.html
+
+![esm-src.png](https://kenokabetech.github.io/img/ts-react-electron/deploy.png)
+
+Firefox should be able to run the local `dist/index.html` file directly with no problem, Chrome generates an error with a security issue.
 
  ## Use the latest TypeScript version installed in the local project not global
 
