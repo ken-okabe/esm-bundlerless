@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dev Tool</title>
+
+
+</head>
+
+<body>
+
+  <style>
+    iframe {
+      width: 1px;
+      height: 1px;
+      min-width: 100%;
+      border-width: 0px;
+    }
+  </style>
+
+
+
+  <iframe id="iFrame" src="http://localhost:19999/index.html" scrolling="no">
+  </iframe>
+
+
+  <script>
+    // In renderer process (web page).
+    const { ipcRenderer } = require('electron');
+    const iFrameResize = require("./iframeresizer.js");
+    const iframe = document.getElementById("iFrame");
+
+    ipcRenderer
+      .on('asynchronous-message',
+        (event, arg) => {
+          // console.log(arg);// prints "ping/reload"
+          return (arg === "reload")
+            ? (() => {
+              iframe.style.visibility = "hidden";
+              iframe.contentWindow.location.reload();
+              iFrameResize({ log: false }, '#iFrame');
+              iframe.style.visibility = "visible";
+            })()
+            : false;
+        })
+  </script>
+
+
+</body>
+
+</html>

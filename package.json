@@ -1,0 +1,22 @@
+{
+  "name": "esm-bundlerless",
+  "description": "ESM (ES6 Modules) Bundlerless Front-end Development tool",
+  "version": "0.0.1",
+  "main": "./main_.js",
+  "scripts": {
+    "test": "electron ./"
+  },
+  "keywords": [
+    "esm",
+    "module"
+  ],
+  "author": "Ken Okabe",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "chokidar": "*",
+    "electron": "^3.0.0-beta.10",
+    "esm": "*",
+    "typescript": "*"
+  }
+}
