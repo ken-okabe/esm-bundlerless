@@ -9,6 +9,7 @@ ESM (ES6 Modules)  simplifies JavaScript application development since there is 
 
 This project provides a basic concept and a minimal prototype.
 
+It's recommended to read https://github.com/kenokabe/esm-bundlerless-react for more complicated React project.
 
 ## ES6 Modules support in modern browsers today
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Browser_compatibility
