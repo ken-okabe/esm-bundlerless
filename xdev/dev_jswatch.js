@@ -115,7 +115,7 @@ const jswatch = () => {
       .reduce(operator, data);
 
     const resultjs = result
-      .replace(/import .+\/[^\/\.]+(?=['"];?$)/gm, '$&.js');
+      .replace(/^(import[^\S\r\n].+?[^\S\r\n]from[^\S\r\n]*(["']))((?:(?!(?:\.js)?\2)[\S\s])+)(\2\s*;)/mg, '$1$3.js$4');
     console.log("remapped as=======");
     console.log(resultjs);
 
