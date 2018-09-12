@@ -70,11 +70,10 @@ Firefox should be able to run the local `dist/index.html` file directly with no 
 
  ## Use the latest TypeScript version installed in the local project not global
 
-It's a good manner not to install typescript npm package 
-
-not to global 
-`npm install -g typescript`
-but to local --save-dev.
+It's a good manner to install typescript npm package 
+- not to global  
+`npm install -g typescript`  
+- but to local --save-dev.  
 `npm install -D typescript`
 
 In VisualStudio Code, by clicking the TypeScript Version, it's easy to switch to use the project local(WorkSpace) installed version.
